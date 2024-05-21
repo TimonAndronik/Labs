@@ -1,0 +1,33 @@
+.traffic_lights {
+  width: 74px;
+  height: 200px;
+  background-color: black;
+  padding-top: 4px;
+}
+
+.light {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+  border: 2px solid white;
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
+}
+
+
+.active {
+  opacity: 1;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}

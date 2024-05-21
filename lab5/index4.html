@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Інтернет-магазин</title>
+</head>
+<body>
+<h1>Інтернет-магазин</h1>
+
+<label for="productName">Назва продукту:</label>
+<input type="text" id="productName"><br>
+
+<label for="productPrice">Ціна:</label>
+<input type="number" id="productPrice"><br>
+
+<label for="productQuantity">Кількість на складі:</label>
+<input type="number" id="productQuantity"><br>
+
+<button onclick="addProduct()">Додати продукт</button><br><br>
+
+<label for="searchProduct">Пошук за назвою:</label>
+<input type="text" id="searchProduct">
+<button onclick="searchProduct()">Пошук</button><br><br>
+
+<h2>Список продуктів</h2>
+<ul id="productList"></ul>
+
+
+
+<button onclick="orderProduct()">Замовити продукт</button><br><br>
+
+<script src="l4.js"></script>
+</body>
+</html>
