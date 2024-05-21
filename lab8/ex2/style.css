@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    padding: 0;
+}
+
+.slider {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    position: relative;
+    flex: 0 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px; /* Змініть висоту слайдів за потреби */
+    background: linear-gradient(135deg, #00bcd4, #ff4081);
+}
+
+img {
+    width: 70%; /* Змінено ширину картинок */
+    max-height: 90%; /* Робимо картинки адаптивними */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 50px; /* Зменшуємо розмір стрілок */
+    z-index: 1; /* Піднімаємо стрілки над слайдами */
+    background: transparent; /* Робимо фон стрілок прозорим */
+}
+
+.arrow.prev {
+    left: 10px;
+}
+
+.arrow.next {
+    right: 10px;
+}
+
+.slide:hover .arrow {
+    opacity: 1;
+}
+
+.arrow:hover {
+    opacity: 0.8;
+}
+
+.pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #ffffff;
+}
+
+/* Медіа-запит для пристроїв з маленькими екранами, наприклад, мобільні пристрої */
+@media only screen and (max-width: 600px) {
+    .slide {
+        height: 200px; /* Зменшуємо висоту слайдів для малих екранів */
+    }
+    
+    img {
+        width: auto;
+        height: auto; /* Адаптивний розмір картинок для малих екранів */
+    }
+    
+    .arrow {
+        font-size: 30px; /* Зменшуємо розмір стрілок для малих екранів */
+    }
+}
+
+/* Медіа-запит для планшетів та інших пристроїв з середніми екранами */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .slider {
+        width: 90%; /* Зменшуємо ширину слайдера для середніх екранів */
+    }
+}
