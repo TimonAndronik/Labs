@@ -1,0 +1,219 @@
+body{
+    background-color: #4cacaf;
+}
+
+.product-container {
+    width: 324px; /* Залишаємо початкову ширину для широких екранів */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: white;
+    font-weight: 700;
+    box-shadow: 10px 10px 9px rgba(255, 255, 255, 0.1);
+}
+
+.product-container img {
+    width: auto;
+    height: 180px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Змінено прозорість тла */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px; /* Додано круглі кути */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Додана тінь */
+    width: 80%;
+    max-width: 500px; /* Задано максимальну ширину */
+    text-align: center; /* Вирівняно елементи по центру */
+    animation: slideIn 0.5s ease-out; /* Додано анімацію для з'явлення елементів */
+    
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s; /* Додано анімацію для зміни кольору */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#save-changes-btn {
+    background-color: #4CAF50; /* Змінено колір кнопок */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px; /* Додано круглі кути */
+    transition: background-color 0.3s; /* Додано анімацію для зміни кольору кнопок */
+}
+
+#save-changes-btn:hover {
+    background-color: #235025; /* Змінено колір кнопок при наведенні */
+}
+
+
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+#total-price {
+    font-weight: bold;
+    font-size: larger;
+    width: 250px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes slideOut {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(30px); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-out {
+    animation: slideOut 1s ease-out;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease;
+}
+
+@media (max-width: 794px) {
+    .product-container {
+        width: 330px
+    }
+    .product-container img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-container {
+        width: 100%;
+    }
+}
+
+
+#add-product-form {
+    width: 350px;
+    border: black solid 2px;
+    border-radius: 5%;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #dddaff;
+}
+
+#add-product-form div {
+    margin-bottom: 15px;
+}
+
+#add-product-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#add-product-form input[type="text"],
+#add-product-form input[type="file"] {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#add-product-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#add-product-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.delete-btn{
+    background-color: red;
+    color: white;
+    border-radius: 15px;
+    height: 30px;
+    width: 100px;
+}
+
+.delete-btn:hover{
+    background-color: rgb(175, 4, 4);
+}
+
+.filter-total{
+    margin: 20px;
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: black solid 2px;
+    border-radius: 10%;
+    background-color: #dddaff;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.filter{
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60px;
+    padding: 5px;
+    font-weight: 900;
+}

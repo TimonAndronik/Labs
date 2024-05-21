@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+#container {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 94.5%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.addButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    border: 2px solid black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.completed .checkbox {
+    background-color: #4caf50;
+}
+
+.checkbox {
+    position: absolute;
+    left: 10px;
+    top: 45%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.task-text {
+    margin-left: 30px;
+}
+
+.delete-btn {
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    border: 2px solid black;
+    background-color: #f44336;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c4372d;
+}
+
+li:hover .delete-btn {
+    opacity: 1;
+}
+
+.sort-btn{
+    background-color: #4caf50;
+    color: white;
+    height: 35px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.sort-btn:hover{
+    background-color: #45a049;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.task-item {
+    animation: fadeIn 0.5s ease forwards;
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.deleting {
+    animation: fadeOut 0.5s ease forwards;
+}
+

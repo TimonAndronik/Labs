@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <form id="add-product-form">
+            <center>
+                <h2>Додати новий товар</h2>
+                <div>
+                    <label for="product-name">Назва товару:</label>
+                    <input type="text" id="product-name" required>
+                    <label for="product-price">Ціна товару:</label>
+                    <input type="text" id="product-price" required>
+                </div>
+                <div>
+                    <label for="product-image">Зображення товару:</label>
+                    <input type="file" id="product-image" accept="" required>
+                    <button type="submit">Додати товар</button>
+                </div>
+            </center>
+        </form>
+    <center>
+        <h1>Список товарів</h1>
+    </center>
+    
+    <div class="filter-total">
+        <div class="filter">
+            <label for="filter">Фільтр за назвою:</label>            
+            <input type="text" id="filter" placeholder="Введіть назву товару">
+        </div>
+        <div id="total-price"></div>
+    </div>
+    <div id="product-list">
+    </div>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Редагувати інформацію про товар</h2>
+            <p><label for="edit-product-name">Нова назва товару:</label></p>
+            <p><input type="text" id="edit-product-name"></p>
+            <p><label for="edit-product-price">Нова ціна товару:</label></p>
+            <p><input type="text" id="edit-product-price"></p>
+            <p><button id="save-changes-btn">Зберегти зміни</button></p>
+        </div>
+    </div>
+    
+    
+    <script src="javas.js"></script>
+</body>
+</html>
