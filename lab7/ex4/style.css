@@ -1,0 +1,61 @@
+/* Загальний стиль */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Стиль вкладок */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid #3498db; /* Колір лінії розділення вкладок */
+}
+
+.tab {
+  cursor: pointer;
+  padding: 15px 20px;
+  color: #555; /* Колір тексту вкладок */
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Плавний перехід кольору при наведенні */
+}
+
+.tab.active {
+  background-color: #3498db; /* Колір активної вкладки */
+  color: #fff; /* Колір тексту активної вкладки */
+  border-bottom: 2px solid #fff; /* Підкреслення активної вкладки */
+}
+
+.tab:hover {
+  background-color: #ddd; /* Колір вкладки при наведенні */
+}
+
+/* Вміст вкладок */
+.tab-content {
+  margin: 20px; /* Відступи для контенту вкладок */
+}
+
+/* Показувати тільки активну вкладку */
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+/* Стилі для текстового вмісту вкладок */
+.tab-content h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333; /* Колір заголовку */
+}
+
+.tab-content p {
+  line-height: 1.6;
+  color: #666; /* Колір тексту */
+}

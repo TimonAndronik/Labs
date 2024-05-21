@@ -1,0 +1,38 @@
+.container {
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+.block {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin-bottom: 20px;
+}
+.block-info {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-weight: 900;
+}
+#additionalContent1,#additionalContent2{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin-bottom: 20px;
+}
+button{
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+    height: 40px;
+    font-size: large;
+    font-weight: 900;
+}
+button:hover{
+    background-color: rgb(65, 65, 255);
+}
+.block:nth-child(4), .block:last-child{
+    cursor: pointer;
+}

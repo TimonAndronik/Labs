@@ -1,0 +1,68 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #tree {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .node {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .node-header {
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .node-header:hover {
+    background-color: #0056b3;
+  }
+  
+  .node-content {
+    padding: 15px;
+    display: none;
+  }
+  
+  .node-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .node-content .node {
+    margin-left: 0;
+    border-left: 3px solid #ff0000;
+  }
+  
+  .node-content .node-header {
+    background-color: #0056b3;
+    border-radius: 0;
+  }
+  
+  .node-content .node-header:hover {
+    background-color: #0041a3;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
