@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"> 
+        <div class="jumbotron">
+            <div class="first-class-title"><center>First class</div>
+        </div>
+        <div class="radio">
+            <label><input type="radio" value="male" name="gender" checked>Male</label>
+            <label><input type="radio" value="female" name="gender" checked>Female</label>
+            <label><input type="radio" value="all" name="gender" checked>All</label>
+        </div>
+        <div class="form-group">
+            <label for="search">Search:</label>
+            <input type="text" class="form-control" id="search" placeholder="Enter search term...">
+        </div>
+        <div class="form-group">
+            <label for="sort">Sort by:</label>
+            <select class="option-control" id="sort">
+                <option value="nameAsc">Name (A-Z)</option>
+                <option value="nameDesc">Name (Z-A)</option>
+                <option value="ageAsc">Age (Youngest first)</option>
+                <option value="ageDesc">Age (Oldest first)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="nameFilter">Filter by Name:</label>
+            <input type="text" class="form-control" id="nameFilter" placeholder="Enter name...">
+        </div>
+        <div class="form-group">
+            <label for="ageFilter">Filter by Age:</label>
+            <input type="number" class="form-control" id="ageFilter" placeholder="Enter age...">
+        </div>
+
+        <div class="form-group">
+            <label for="emailFilter">Filter by Email:</label>
+            <input type="email" class="form-control" id="emailFilter" placeholder="Enter email...">
+        </div>
+
+        <div class="form-group">
+        <label for="sell">Select nationality:</label>
+        <select class="option-control" id="nationality">
+            <option>AU</option>
+            <option>UA</option>
+            <option>BR</option>
+            <option>CA</option>
+            <option>CH</option>
+            <option>DE</option>
+            <option>DK</option>
+            <option>ES</option>
+            <option>FI</option>
+            <option>FR</option>
+            <option>GB</option>
+        </select>
+</div>
+<div id="result"></div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>validatIOn</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="styleR.css">
+</head>
+<body>
+
+<div class="tab-buttons">
+    <button id="tab-reg" class="tab-button button-yellow" onclick="openTab('register')">Register</button>
+    <button id="tab-log" class="tab-button button-yellow" onclick="openTab('login')">Login</button>
+</div>
+
+<form id="register" class="form" action="/apply/" method="POST">
+    <label>
+        <span class="input-title">Username</span>
+        <div class="input-info">
+            <input class="input" type="text" name="name" id="username" placeholder="Enter username" required autofocus>
+            <div class="error" id="error-username"></div>
+        </div>
+    </label>
+    <label>
+        <span class="input-title">E-mail:</span>
+        <div class="input-info">
+            <input class="input" type="email" name="email" id="reg-email" placeholder="example@gmail.com" required>
+            <div class="error" id="error-reg-email"></div>
+        </div>
+    </label>
+    <label>
+        <span class="input-title">Password:</span>
+        <div class="input-info">
+            <input class="input" type="password" id="reg-password" name="password">
+            <div class="error" id="error-reg-password"></div>
+        </div>
+    </label>
+    <label>
+        <span class="input-title">Repeat password:</span>
+        <div class="input-info">
+            <input class="input" type="password" id="reg-rep-password" name="rep-password">
+            <div class="error" id="error-reg-rep-password"></div>
+        </div>
+
+    </label>
+
+    <button id="reg-submit" class="button button-yellow" type="submit">Send</button>
+</form>
+
+<form id="login" class="form" action="/apply/" method="POST">
+    <label>
+        <span class="input-title">E-mail:</span>
+        <div class="input-info">
+            <input class="input" type="email" name="email" id="log-email" placeholder="example@gmail.com" required>
+            <div class="error" id="error-log-email"></div>    
+        </div>
+    </label>
+    <label>
+        <span class="input-title">Password:</span>
+        <div class="input-info">
+            <input class="input" type="password" id="log-password" name="password">
+            <div class="error" id="error-log-password"></div>
+        </div>
+    </label>
+
+    <button id="log-submit" class="button button-yellow" type="submit">Send</button>
+</form>
+<div id="loader" class="hidden">Sending progress...</div>
+
+<script src="scriptR.js">
+</script>
+</body>
+</html>

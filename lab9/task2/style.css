@@ -1,0 +1,155 @@
+/* Загальні стилі */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+    background-color: #1e1e2f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+label {
+    color: #bb86fc;
+    font-weight: 600;
+}
+
+/* Змінити стилі для введення даних */
+input[type='text'],
+input[type='email'],
+input[type='number'],
+select,
+textarea {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3c3c4c;
+    color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+input[type='text']::placeholder,
+input[type='email']::placeholder,
+input[type='number']::placeholder,
+textarea::placeholder {
+    color: #aaa;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='number']:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #03dac6;
+    border: 1px solid #03dac6;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select option {
+    background-color: #3c3c4c;
+    color: #FFFFFF;
+}
+
+/* Стилі для радіо кнопок */
+.radio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio label {
+    margin-right: 10px;
+}
+
+input[type='radio'] {
+    margin-right: 5px;
+}
+
+.radio input[type='radio'] + label {
+    color: #FFFFFF;
+}
+
+.radio input[type='radio']:checked + label {
+    color: #03dac6;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Стилі для кнопок */
+button {
+    background-color: #03dac6;
+    border: none;
+    color: #18191c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #018786;
+    color: #FFFFFF;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px #03dac6;
+}
+
+/* Зміна кольору тексту "First class" */
+.first-class-title {
+    color: #03dac6; 
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Зміна фону та кольору тексту інформації про людину */
+.person-info {
+    background-color: #2c2c3c; /* Темніший фон для контрасту */
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.person-info img {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.person-info span {
+    margin-right: 15px;
+}
+
+/* Зміна кольору тексту інформації про знайдених людей */
+.person-info span {
+    color: #03dac6; /* Колір тексту */
+}
